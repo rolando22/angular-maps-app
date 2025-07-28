@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'fullscreen-map',
-    title: 'Mapa Completo',
+    title: 'Mapa - Pantalla Completa',
     loadComponent: () => import('@pages/fullscreen-map-page/fullscreen-map-page.component'),
   },
   {
