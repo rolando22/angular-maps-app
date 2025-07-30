@@ -1,1 +1,10 @@
-<p>houses-page works!</p>,
+<section class="container mx-auto flex flex-col gap-2 px-10 py-2">
+  <h2 class="text-3xl font-bold">Casas</h2>
+  <h3 class="text-xl text-gray-500">{{houses().length | i18nPlural: housesMap}}</h3>
+</section>
+
+<section class="container mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-items-center gap-2 px-10">
+  @for (house of houses(); track house.id; let i = $index) {
+    <house-card [house]="house" [newHouse]="i === 0" />
+  }
+</section>

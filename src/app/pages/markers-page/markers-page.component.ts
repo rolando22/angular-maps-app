@@ -1,10 +1,10 @@
 import { AfterViewInit, Component, ElementRef, signal, viewChild } from '@angular/core';
 import mapboxgl, { LngLatLike } from 'mapbox-gl';
 
+import { MarkerItemComponent } from "./marker-item/marker-item.component";
 import { environment } from '@environments/environment';
 
 import type { Marker } from '@shared/interfaces/marker.interface';
-import { MarkerItemComponent } from "./marker-item/marker-item.component";
 
 mapboxgl.accessToken = environment.mapboxKey;
 
