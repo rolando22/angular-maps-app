@@ -1,11 +1,14 @@
-<div class="w-screen h-[calc(100vh-64px)]" #map></div>
+<div class="w-screen h-[60vh] md:h-[calc(100vh-64px)]" #map></div>
 
-<section class="fixed w-[260px] bg-white rounded top-20 left-10 p-5">
+<section
+  class="sm:fixed md:w-[260px] bg-white md:rounded md:top-20 md:left-10 p-5"
+  [class.h-[40vh]]="markers().length > 0"
+>
   <h2 class="text-2xl font-bold text-black mb-2">
     Marcadores
   </h2>
 
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-2 w-full h-[calc(100%-32px)] overflow-y-scroll">
     @for (marker of markers(); track marker.id) {
       <marker-item
         [marker]="marker"

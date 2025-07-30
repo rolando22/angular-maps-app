@@ -3,10 +3,15 @@
   (click)="click.emit()"
   (dblclick)="dblclick.emit()"
 >
-  <label class="label cursor-pointer">
-    <span class="label-text text-black text-xs whitespace-normal break-words">
-      {{marker().mapboxMarker.getLngLat() | json}}
-    </span>
+  <label class="label flex justify-between cursor-pointer">
+    <div class="flex flex-col">
+      <span class="label-text text-black text-xs whitespace-normal break-words">
+        Longitid: {{marker().mapboxMarker.getLngLat().lng}}
+      </span>
+      <span class="label-text text-black text-xs whitespace-normal break-words">
+        Latitud: {{marker().mapboxMarker.getLngLat().lat}}
+      </span>
+    </div>
     <input
       type="radio"
       name="radio-10"

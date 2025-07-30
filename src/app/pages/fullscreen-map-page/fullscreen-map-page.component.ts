@@ -10,25 +10,6 @@ mapboxgl.accessToken = environment.mapboxKey;
   selector: 'app-fullscreen-map-page',
   imports: [DecimalPipe, JsonPipe],
   templateUrl: './fullscreen-map-page.component.html',
-  styles: `
-    div {
-      width: 100vw;
-      height: calc(100vh - 64px);
-    }
-
-    #controls {
-      background: white;
-      padding: 10px;
-      border-radius: 5px;
-      position: fixed;
-      bottom: 25px;
-      right: 20px;
-      z-index: 9999;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-      border: 1px solid #e2e8f0;
-      width: 250px;
-    }
-  `,
 })
 export default class FullscreenMapPageComponent implements AfterViewInit {
   divMap = viewChild<ElementRef>('map');
