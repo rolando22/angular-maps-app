@@ -1,8 +1,12 @@
 # Maps App
 
-Levantar el proyecto en Dev
+## Levantar el proyecto en Dev
 
 1. Clonar repositorio.
 2. Instalar dependencias.
 3. Generar el `.env` basado en el `.env.template`.
 4. Ejecutar el comando `npm run set-envs`.
+
+## Deploy 
+
+URL: https://inquisitive-basbousa-c2ba12.netlify.app/
