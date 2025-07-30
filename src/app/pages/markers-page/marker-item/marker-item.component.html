@@ -1,0 +1,18 @@
+<div
+  class="form-control"
+  (click)="click.emit()"
+  (dblclick)="dblclick.emit()"
+>
+  <label class="label cursor-pointer">
+    <span class="label-text text-black text-xs whitespace-normal break-words">
+      {{marker().mapboxMarker.getLngLat() | json}}
+    </span>
+    <input
+      type="radio"
+      name="radio-10"
+      class="radio"
+      [style]="{ backgroundColor: marker().mapboxMarker._color}"
+      checked="checked"
+    >
+  </label>
+</div>

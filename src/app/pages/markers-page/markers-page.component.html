@@ -1,1 +1,21 @@
-<p>markers-page works!</p>,
+<div class="w-screen h-[calc(100vh-64px)]" #map></div>
+
+<section class="fixed w-[260px] bg-white rounded top-20 left-10 p-5">
+  <h2 class="text-2xl font-bold text-black mb-2">
+    Marcadores
+  </h2>
+
+  <div class="flex flex-col gap-2">
+    @for (marker of markers(); track marker.id) {
+      <marker-item
+        [marker]="marker"
+        (click)="flyToMarker(marker.mapboxMarker.getLngLat())"
+        (dblclick)="deleteMarker(marker)"
+      />
+    } @empty {
+      <div class="flex justify-center items-center bg-blue-100 rounded py-5">
+        <p class="text-xs text-secondary">No hay marcadores</p>
+      </div>
+    }
+  </div>
+</section>
